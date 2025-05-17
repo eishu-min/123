@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SkinSense Web</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <!-- TensorFlow.js & WASM backend -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.7.0/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-wasm@4.7.0/dist/tf-backend-wasm.min.js"></script>
+  <!-- TF-Lite model loader -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-tflite@0.0.1-alpha.6/dist/tf-tflite.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>SkinSense Web</h1>
+    <video id="video" autoplay playsinline></video>
+    <canvas id="canvas" hidden></canvas>
+    <div class="controls">
+      <button id="start-camera">Start Camera</button>
+      <button id="capture">Capture & Analyze</button>
+      <input type="file" id="upload" accept="image/*">
+    </div>
+    <div id="results"></div>
+    <h2>Progress</h2>
+    <ul id="history"></ul>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
