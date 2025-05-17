@@ -1,0 +1,2 @@
+cd skinsense-web
+surge . skinsense-app.surge.sh
